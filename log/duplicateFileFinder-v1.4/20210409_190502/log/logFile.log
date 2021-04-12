@@ -1,0 +1,9 @@
+INFO:root:
+
+
+20210409_190506 : ******* Program Start  ******* 
+INFO:root:20210409_190506 : searchDir : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\source\
+INFO:root:20210409_190506 : outDir : S:\duplicateFileFinder-v1.4\20210409_190502\out\
+INFO:root:20210409_190506 : outFile : S:\duplicateFileFinder-v1.4\20210409_190502\out\outFile.csv
+INFO:root:20210409_190506 : logDir : S:\duplicateFileFinder-v1.4\20210409_190502\log\
+INFO:root:20210409_190506 : logFile : S:\duplicateFileFinder-v1.4\20210409_190502\log\logFile.log

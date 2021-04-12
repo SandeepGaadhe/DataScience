@@ -1,0 +1,10 @@
+INFO:root:
+
+
+20210410_083159 : ******* Program Start  ******* 
+INFO:root:20210410_083159 : searchDir : F:\
+INFO:root:20210410_083159 : outDir : S:\duplicateFileFinder-v1.4\20210410_083159\out\
+INFO:root:20210410_083159 : outFile : S:\duplicateFileFinder-v1.4\20210410_083159\out\outFile.csv
+INFO:root:20210410_083159 : logDir : S:\duplicateFileFinder-v1.4\20210410_083159\log\
+INFO:root:20210410_083159 : logFile : S:\duplicateFileFinder-v1.4\20210410_083159\log\logFile.log
+INFO:root:20210410_083159 : ERROR : [Errno 13] Permission denied: 'F:\\$RECYCLE.BIN\\desktop.ini'|F:\$RECYCLE.BIN\desktop.ini

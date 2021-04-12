@@ -1,0 +1,64 @@
+INFO:root:20210405_214041
+INFO:root:test
+INFO:root:20210405_214213
+INFO:root:20210405_214213
+INFO:root:20210405_214213
+INFO:root:20210405_214213
+INFO:root:20210405_214213
+INFO:root:20210405_214213
+INFO:root:20210405_214417
+INFO:root:20210405_214417
+INFO:root:20210405_214417
+INFO:root:20210405_214417
+INFO:root:20210405_214417
+INFO:root:20210405_214417
+INFO:root:20210405_214442 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy - 1.jpg
+INFO:root:20210405_214442 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - 1.jpg
+INFO:root:20210405_214443 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy - 1.jpg
+INFO:root:20210405_214443 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - 1.jpg
+INFO:root:20210405_214443 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose - 1.jpg
+INFO:root:20210405_214443 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose - 1.jpg
+INFO:root:20210405_214534 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose - 1.jpg
+INFO:root:20210405_214707 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\mogra - Copy - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\mogra - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\mogra - Copy - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\mogra - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\rose - 1.jpg
+INFO:root:20210405_220108 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\logs\sunflower - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\rose - 1.jpg
+INFO:root:20210405_220148 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\sunflower - 1.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 2.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 2.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\rose - 1.jpg
+INFO:root:20210405_220250 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\sunflower - 1.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 2.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra - Copy.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 3.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\mogra.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 2.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\rose.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\rose - 1.jpg
+INFO:root:20210405_220254 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\sunflower - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 2.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 2 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 1.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 1 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 2.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 2 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 3.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - Copy - 3 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\rose - 1.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\rose - 1 - 1.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 01\sunflower.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\sunflower - 2.jpg
+INFO:root:20210405_220446 : SUCCESS : Moved : S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\folder 02\mogra - 1.jpg | S:\SandeepG\Official\DataScience\Data\duplicateFileFinder\duplicates\mogra - 1 - 2.jpg
