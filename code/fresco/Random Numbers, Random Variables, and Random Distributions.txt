@@ -1,0 +1,213 @@
+Random Numbers
+Random Numbers
+A random number is a number, chosen by chance from a distribution.
+
+Python provides a lot of modules, which deal with random numbers.
+
+random module of python standard library.
+random module of Numpy
+stats module of Scipy
+In this course, you will work with a module of NumPy and SciPy.
+
+
+
+
+
+
+
+Numpy's Random Module
+random module of numpy has utilities, which generate arrays of random numbers.
+
+E.g.: rand function generates uniformly distributed numbers from range [0, 1)
+
+rand function with no arguments generate a single random value.
+
+By passing arguments, it generates a random array of specified size.
+
+Example
+import numpy as np
+
+print(np.random.rand())
+
+# generates a 2*3 array
+print(np.random.rand(2,3))
+
+
+
+
+
+
+
+
+
+
+
+
+Random Sampling
+Random Sampling
+In statistics, you select items randomly from a population, either with or without a replacement.
+
+This can be achieved with choice method as shown below.
+
+import numpy as np
+
+print(np.random.choice([11, 22, 33], 2, replace=False))
+In above example, two items are selected randomly, without replacement.
+
+
+
+
+
+
+
+
+
+
+
+
+Random Seeding
+Seed is an important concept when it comes to reproducibility. If you are working with random numbers and you would want to peers to validate your results, i.e., they should also get the same random sequence as you did, you can set the seed to a particular value and send the seed value to your peers.
+
+seed is a number that sets the initial state of random number generator.
+
+Setting a seed, helps in generating the same sequence of random numbers, repeatedly.
+
+seed method of a random module can be used to set a seed as shown in below example.
+
+import numpy as np
+
+np.random.seed(100)
+print(np.random.rand())
+
+np.random.seed(100)
+print(np.random.rand())
+Output
+0.5434
+0.5434
+
+
+
+
+
+
+
+
+Random Variables
+In probability theory, the set of all possible outcomes of a random experiment is known as sample space.
+
+Probabilities of all outcomes of the experiment define the probability distribution.
+
+A random variable is a variable that takes real numbers or integers and map each value to one of the outcomes of sample space.
+
+E.g.: In an experiment of tossing a coin, the sample space is {'Head', 'Tail'} and a possible random variable takes the value 0 for head and 1 for the tail.
+
+
+
+
+
+
+
+
+
+
+
+Probability Distributions
+There are two types of probability distributions namely discrete and continuous that take integer and real values, respectively.
+
+scipy.stats module provides classes that represent random variables, corresponding to a large number of probability distributions.
+
+E.g: the class norm represent normal continuous random variable, and binom represent binomial discrete random variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Random Distributions
+scipy.stats module provide a lot of methods for created discrete and continuous random variables.
+
+Commonly used methods are described below.
+
+pdf / pmf : Probability distribution function (continuous) or probability mass function (discrete).
+cdf : Cumulative distribution function.
+sf : Survival function (1 – cdf).
+rvs : Creating random samples from a distribution.
+
+
+
+
+
+
+
+Home
+My Courses
+Explore
+SG
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Random Distributions
+The following example defines a normal continuous random variable of mean 1.0 and std 2.5.
+
+It also estimates probabilities and cumulative probabilities at -1, 0 and 1.
+
+The example also generates six random numbers from defined normal distribution.
+
+Example
+from scipy import stats
+
+x = stats.norm(loc=1.0, scale=2.5)
+
+print(x.pdf([-1, 0, 1]))
+
+print(x.cdf([-1, 0, 1]))
+
+print(x.rvs((2,3)))
+8 of 11
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

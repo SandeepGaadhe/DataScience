@@ -1,0 +1,103 @@
+Hypothesis Testing
+Hypothesis Testing
+Hypothesis Testing is a methodology for evaluating if a claim is acceptable or not, based on data.
+
+In a Hypothesis Testing, a Null Hypothesis (Ho) represents currently accepted the state of knowledge, and an Alternative Hypothesis (Ha) represents a new claim which challenges the currently accepted state of knowledge.
+
+The null hypothesis and the alternative hypothesis are mutually exclusive.
+
+
+
+
+
+
+Steps Involved in Hypothesis Testing
+The following steps are involved in a Hypothesis Testing:
+
+Define the null hypothesis and the alternative hypothesis.
+
+Select a test statistics whose probability distribution function can be found under the null hypothesis.
+
+Collect data.
+
+Compute the test statistics from the data and calculate its p-value under the null hypothesis.
+
+Null hypothesis is rejected if the p-value is lower than predetermined significance value.
+
+
+
+
+
+Choosing Test Statistics
+In hypothesis testing, selecting a test statistics is the most difficult part.
+
+The methods used for performing t-test are shown below.
+
+stats.ttest_1samp: Tests if the mean of a population is a given value.
+stats.ttest_ind: Tests if the means of two independent samples are equal.
+stats.ttest_rel: Tests if the means of two paired samples are equal.
+
+
+
+
+Example 1
+Let's consider a common hypothesis: Mean of a population is equal to certain value.
+
+In reality, we estimate mean and variance of a sample and calculate the test statistic.
+
+If population variance is identified, then it is reasonable to consider that test statistic is normally distributed.
+
+If population variance is unknown, sample variance is used, and test statistic follows t distribution.
+
+
+
+
+Example 1
+Consider a normal population with mean 0.8 and standard deviation 0.5.
+
+Define the null hypothesis as Mean of the population is 1.0.
+
+Let's calculate t-statistic and p-value
+
+from scipy import stats
+import numpy as np
+
+mu, sigma = 0.8, 0.5
+X = stats.norm(mu, sigma)
+
+# Deriving a sample
+n = 100
+X_sample = X.rvs(n)
+
+# Computing test statistic
+t, p = stats.ttest_1samp(X_sample, 1.0)
+print(t, p)
+Output
+-4.99, 0.0000025
+
+In previous example, the obtained t-statistic value is -4.99 and p-value is 0.0000025.
+
+Since p-value is very low and less than the significance level 0.05, you can reject the null hypothesis and infer that the mean of the population is not 1.
+
+
+
+Example 2
+Let's consider another problem, where the null hypothesis states that the population means of two random variables are equal.
+
+The below example derives two samples from different populations and verifies the claim that their population means are equal.
+
+X1 = stats.norm(0.25, 1.0)
+X2 = stats.norm(0.50, 1.0)
+
+X1_sample = X1.rvs(100)
+X2_sample = X2.rvs(100)
+
+t, p = stats.ttest_ind(X1_sample, X2_sample)
+print(t, p)
+Output
+-3.126  0.002
+
+Example 2
+In previous example, the obtained t-statistic value is -3.126 and p-value is 0.002.
+
+Since p-value is very low and less than the significance level 0.05, you can reject the null hypothesis and state that population means of both samples differ.

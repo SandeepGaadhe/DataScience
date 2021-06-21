@@ -1,0 +1,729 @@
+
+***** Script Execution Start *****
+
+
+Parent loop execution for dUser: {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person1
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person3
+users[dUser['id']]['foafCount'] {}. directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person2
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+
+Parent loop execution for dUser: {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person0
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person2
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person4
+users[dUser['id']]['foafCount'] {}. directFriend : Person4
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+
+Parent loop execution for dUser: {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person0
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person1
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GreatGrandChild loop execution for directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person4
+users[dUser['id']]['foafCount'] {}. directFriend : Person4
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+
+Parent loop execution for dUser: {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person1
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GreatGrandChild loop execution for directFriend : Person0
+users[dUser['id']]['foafCount'] {}. directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0'], 'foafCount': {'Person0': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person2
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GreatGrandChild loop execution for directFriend : Person0
+
+GreatGrandChild loop execution for directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0'], 'foafCount': {'Person0': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person4
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0'], 'foafCount': {'Person0': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person3
+
+GreatGrandChild loop execution for directFriend : Person5
+users[dUser['id']]['foafCount'] {'Person0': 1}. directFriend : Person5
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+
+Parent loop execution for dUser: {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person3
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GreatGrandChild loop execution for directFriend : Person1
+users[dUser['id']]['foafCount'] {}. directFriend : Person1
+
+GreatGrandChild loop execution for directFriend : Person2
+users[dUser['id']]['foafCount'] {'Person1': 1}. directFriend : Person2
+
+GreatGrandChild loop execution for directFriend : Person4
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2'], 'foafCount': {'Person1': 1, 'Person2': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person5
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2'], 'foafCount': {'Person1': 1, 'Person2': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person4
+
+GreatGrandChild loop execution for directFriend : Person6
+users[dUser['id']]['foafCount'] {'Person1': 1, 'Person2': 1}. directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+users[dUser['id']]['foafCount'] {'Person1': 1, 'Person2': 1, 'Person6': 1}. directFriend : Person7
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+
+Parent loop execution for dUser: {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person4
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GreatGrandChild loop execution for directFriend : Person3
+users[dUser['id']]['foafCount'] {}. directFriend : Person3
+
+GreatGrandChild loop execution for directFriend : Person5
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person6
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person5
+
+GreatGrandChild loop execution for directFriend : Person8
+users[dUser['id']]['foafCount'] {'Person3': 1}. directFriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person7
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person5
+
+GreatGrandChild loop execution for directFriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+
+Parent loop execution for dUser: {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person5
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GreatGrandChild loop execution for directFriend : Person4
+users[dUser['id']]['foafCount'] {}. directFriend : Person4
+
+GreatGrandChild loop execution for directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+users[dUser['id']]['foafCount'] {'Person4': 1}. directFriend : Person7
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7'], 'foafCount': {'Person4': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7'], 'foafCount': {'Person4': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+
+GreatGrandChild loop execution for directFriend : Person9
+users[dUser['id']]['foafCount'] {'Person4': 1, 'Person7': 1}. directFriend : Person9
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+
+Parent loop execution for dUser: {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person5
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GreatGrandChild loop execution for directFriend : Person4
+users[dUser['id']]['foafCount'] {}. directFriend : Person4
+
+GreatGrandChild loop execution for directFriend : Person6
+users[dUser['id']]['foafCount'] {'Person4': 1}. directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6'], 'foafCount': {'Person4': 1, 'Person6': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6'], 'foafCount': {'Person4': 1, 'Person6': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+
+GreatGrandChild loop execution for directFriend : Person9
+users[dUser['id']]['foafCount'] {'Person4': 1, 'Person6': 1}. directFriend : Person9
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+After Parent loop execution for : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+
+
+Parent loop execution for dUser: {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person6
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GreatGrandChild loop execution for directFriend : Person5
+users[dUser['id']]['foafCount'] {}. directFriend : Person5
+
+GreatGrandChild loop execution for directFriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person7
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+
+GreatGrandChild loop execution for directFriend : Person5
+
+GreatGrandChild loop execution for directFriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person9
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+GreatGrandChild loop execution for directFriend : Person8
+After Parent loop execution for : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+
+
+Parent loop execution for dUser: {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': [], 'foafCount': {}}
+
+Child loop execution for sfriend : Person8
+
+GrandChild loop execution for dUserFriend : {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+
+GrandChild loop execution for dUserFriend : {'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+
+GreatGrandChild loop execution for directFriend : Person6
+users[dUser['id']]['foafCount'] {}. directFriend : Person6
+
+GreatGrandChild loop execution for directFriend : Person7
+users[dUser['id']]['foafCount'] {'Person6': 1}. directFriend : Person7
+
+GreatGrandChild loop execution for directFriend : Person9
+
+GrandChild loop execution for dUserFriend : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': ['Person6', 'Person7'], 'foafCount': {'Person6': 1, 'Person7': 1}}
+After Parent loop execution for : {'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': ['Person6', 'Person7'], 'foafCount': {'Person6': 1, 'Person7': 1}}
+
+
+
+{'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': ['Person3'], 'foafCount': {'Person3': 1}}
+{'id': 1, 'name': 'Person1', 'friends': ['Person0', 'Person2', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+{'id': 2, 'name': 'Person2', 'friends': ['Person0', 'Person1', 'Person3'], 'foaf': ['Person4'], 'foafCount': {'Person4': 1}}
+{'id': 3, 'name': 'Person3', 'friends': ['Person1', 'Person2', 'Person4'], 'foaf': ['Person0', 'Person5'], 'foafCount': {'Person0': 1, 'Person5': 1}}
+{'id': 4, 'name': 'Person4', 'friends': ['Person3', 'Person5'], 'foaf': ['Person1', 'Person2', 'Person6', 'Person7'], 'foafCount': {'Person1': 1, 'Person2': 1, 'Person6': 1, 'Person7': 1}}
+{'id': 5, 'name': 'Person5', 'friends': ['Person4', 'Person6', 'Person7'], 'foaf': ['Person3', 'Person8'], 'foafCount': {'Person3': 1, 'Person8': 1}}
+{'id': 6, 'name': 'Person6', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person7', 'Person9'], 'foafCount': {'Person4': 1, 'Person7': 1, 'Person9': 1}}
+{'id': 7, 'name': 'Person7', 'friends': ['Person5', 'Person8'], 'foaf': ['Person4', 'Person6', 'Person9'], 'foafCount': {'Person4': 1, 'Person6': 1, 'Person9': 1}}
+{'id': 8, 'name': 'Person8', 'friends': ['Person6', 'Person7', 'Person9'], 'foaf': ['Person5'], 'foafCount': {'Person5': 1}}
+{'id': 9, 'name': 'Person9', 'friends': ['Person8'], 'foaf': ['Person6', 'Person7'], 'foafCount': {'Person6': 1, 'Person7': 1}}
+
+***** Script Execution End *****

@@ -1,0 +1,82 @@
+Statistical Modelling
+Statistical Modelling deals with creating models that attempt to explain the data best.
+
+The simplest model is a linear model represented as Y = B0 + B1*X + e, where the coefficients, B0 and B1 are the parameters of the model and e is normally distributed residual error.
+
+A linear regression model assumes that residuals are independent and normally distributed.
+
+The model is fitted to data using ordinary least squares approach.
+
+
+
+
+Linear Models
+In most of the linear regression models, a dependent variable Y is written as :
+a linear combination of the response variables X i.e Y = B0 + B1*X1 + ... + Bn*Xn, or
+functions of the response variables i.e Y = B0 + B1*X + B2*x^2 + ... + Bn*X^n, or
+models that have a linear component i.e Y = B0 + B1*sin(X1) + B2*cos(X2)
+
+
+
+
+Non-Linear Models
+Other than linear regression models, statistical modeling can be used to build non-linear models.
+Errors of dependent variable follow a distribution other than normal distribution.
+Examples of non-linear models are: Binomial Regression and Poisson Regression.
+In most of the cases, the non-linear models are generalized to linear models.
+
+
+Design Matrices
+In reality, you choose a model and fit the available data to it.
+
+Once a model is chosen, design matrices y and X are constructed, and the regression problem is written, in matrix form, as y = XB + e.
+
+where y is the vector of observations, X is the vector of dependent variables, B is a vector of coefficients, and e is the residual (error).
+Thus obtained design matrices are passed as inputs to the chosen model.
+
+
+Statistical Modelling with StatsModels
+statsmodels library supports several types of statistical models.
+
+All of them follow a similar usage pattern.
+
+A Statistical model is represented by a model class.
+
+A model can be initiated with,
+
+given design matrices of dependent and independent variables, or with
+given patsy formula and data frame or dictionary-like object.
+
+
+
+
+
+Step 1: Creating a Model
+An instance of a model class is created in either of the following ways.
+
+model = sm.MODEL(y, X) or
+model = smf.model(patsy_formula, data)
+where MODEL and model refer to model names such as OLS, GLM, ols, glm, etc.
+
+Uppercase names take design matrices as arguments, and lowercase names take Patsy formulas and data frames as arguments.
+
+
+
+
+
+Step 2: Fitting a Model
+In order to fit the model with data, fit method is invoked on the created model, as shown below.
+
+result = model.fit()
+The fit method returns a result object, which has methods and attributes for further analysis.
+
+
+
+Step 3: Viewing Model Summary
+The summary method of result object produces a summary text that describes the result of the fit, as shown below.
+
+print(result.summary())
+The displayed summary text varies for each statistical model and provides information of various statistical parameters.
+
+
+

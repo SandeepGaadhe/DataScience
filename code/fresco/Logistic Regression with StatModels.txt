@@ -1,0 +1,116 @@
+Discrete Regression models
+statsmodels provide the following classes to work with discrete regression problems.
+
+Logit: for Logistic Regression
+MNLogit: for Multinomial Logistic Regression
+Poisson: for Poisson Regression
+In this course, you will see an example of performing Logistic regression and Poisson regression.
+
+
+
+Logistic Regression
+Now, let's understand how to perform logistic regression using statsmodels with the following steps:
+
+Download the popular iris data set (containing data of 3 species) from R repository.
+Subset the data of only two species.
+Perform transformations, if required.
+Define a patsy formula and create a model using logit.
+Fit the model with supplied data.
+View summary of the model.
+
+
+Loading iris Dataset
+Example of loading the dataset
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import numpy as np
+import pandas as pd
+
+df = sm.datasets.get_rdataset("iris").data 
+df.info()
+df.Species.unique() 
+Output
+array(['setosa', 'versicolor', 'virginica'], dtype=object)
+
+
+Selecting Required Data
+As seen in the previous example, iris dataset contains details of three types of species.
+In a logistic regression, the response variable refers to only two type of categories. Hence, data of two species is filtered and considered in further steps.
+Sub setting
+iris_subset = iris[(iris.Species == "versicolor") | (iris.Species == "virginica")].copy()
+
+print(iris_subset.Species.unique())
+Output
+['versicolor' 'virginica']
+
+
+
+
+
+Applying Transformations
+A binary variable corresponding to two species is created using map function as shown below.
+df_subset = df[(df.Species == "versicolor") | (df.Species == "virginica" )].copy() 
+period characters, present in column names are replaced with underscore characters.
+df_subset.Species = df_subset.Species.map({"versicolor": 1, "virginica": 0}) 
+
+df_subset.rename(columns={"Sepal.Length": "Sepal_Length", "Sepal.Width": "Sepal_Width",	"Petal.Length": "Petal_Length", "Petal.Width": "Petal_Width"}, Inplace=True) 
+
+
+
+
+Creating the Model
+A logistic regression model, explaining relationship of Species variable with Petal_Length and Petal_width is generated using logit function.
+
+The appropriate patsy formula is passed as argument to logit function.
+
+model = smf.logit("Species ~ Petal_Length + Petal_Width", data=df_subset)
+Model is then fit with supplied data using fit function
+result = model.fit() 
+
+
+Viewing the Summary
+Viewing the Summary
+Model summary is viewed using command result.summary().
+
+
+
+
+
+
+
+
+
+
+
+
+Analyzing the Model
+The model summary indicates that both Petal_Length and Petal_Width are statistically significant.
+
+For every unit change in Petal_Length, the log odds of being versicolor decreases by 5.75.
+
+For every unit change in Petal_Width, the log odds of being versicolor decreases by 10.44.
+
+Once satisfied with the model, it can be used to predict response variable value for new values of independent variables.
+
+
+
+
+
+
+Predicting Response Variable
+Now, let's create 20 observations having random values of Petal_Length and Petal_Width.
+
+Use these 20 observations to predict values for Species.
+
+df_new = pd.DataFrame({"Petal_Length": np.random.randn(20)*0.5 + 5,
+                       "Petal_Width": np.random.randn(20)*0.5 + 1.7})
+df_new["P-Species"] = result.predict(df_new)
+df_new["P-Species"].head(3)
+
+df_new["Species"] = (df_new["P-Species"] > 0.5).astype(int)
+df_new.head()
+The result is an array of probabilities of response variable being 1 or 0.
+
+
+
+

@@ -1,0 +1,49 @@
+ Constructing Design Matrices
+The below example shows calculation of design matrices, y, and X, for the considered linear model Y = B0 + B1*X1 + B2*X2 + B3*X1*X2.
+Example
+import numpy as np
+
+y = np.array([1, 2, 3, 4, 5])
+x1 = np.array([6, 7, 8, 9, 10])
+x2 = np.array([11, 12, 13, 14, 15])
+X = np.vstack([np.ones(5), x1, x2, x1*x2]).T
+
+print(y)
+print(X)
+Thus obtained design matrices (y and X) can be passed to regression methods for obtaining the coefficient vector.
+
+
+Design Matrices with patsy
+patsy, a python library, allows defining a model in simpler easily.
+
+It also constructs relevant design matrices, automatically, using patsy.dmatrices function.
+
+patsy.dmatrices takes a formula (in string form) as a first argument, and a dictionary-like object with data arrays for the response variables as second arguments.
+
+
+
+
+
+
+Understanding patsy Formulae
+Let's understand few patsy formulae provided below.
+
+'y ~ x' : y is linearly dependent on x. ~ symbol separates dependent variable from independent variable terms. It is also equivalent to 'y ~ 1 + x'.
+
+'y ~ x1 + x2' : y is a linear combination of x1 and x2. + sign is used to denote the union of terms.
+
+y ~ x1*x2 : x1*x2 is an interaction term that includes all lower order terms. Hence formula is equivalent to y ~ 1 + x1 + x2 + x1*x2.
+
+
+
+
+
+
+
+
+Understanding patsy Formulae
+'y ~ np.log(x1)': Often numpy functions can be used to transform terms in the expression.
+
+'y ~ I(x1 + x2)': I is the identify function, used to escape arithmetic expressions and are evaluated.
+
+'y ~ C(x1)': Treats the variable x1 as a categorical variable.

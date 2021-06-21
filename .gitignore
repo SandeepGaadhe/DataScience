@@ -9,3 +9,5 @@ data/kaggle/mlb/mlb-player-digital-engagement-forecasting/mlb/competition.cpytho
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/players.csv
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/seasons.csv
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/teams.csv
+*.csv
+*.xlsx

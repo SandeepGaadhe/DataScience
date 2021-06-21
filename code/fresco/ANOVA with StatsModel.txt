@@ -1,0 +1,95 @@
+ANOVA Example
+Let's now understand how to perform ANOVA of a fitted regression model.
+
+For this example, let's once again consider popular Icecream dataset, used in linear regression section.
+
+Loading the Dataset
+import statsmodels.api as sm
+
+icecream = sm.datasets.get_rdataset("Icecream", "Ecdat")
+icecream_data = icecream.data
+
+
+
+Building the Model
+import statsmodels.formula.api as smf
+
+model1 = smf.ols('cons ~ temp', icecream_data).fit()
+A linear regression model of icecream consumption with temperature is built using ols method.
+
+Now let's frame a null hypothesis: Value of B1, i.e., the coefficient of temp variable is zero.
+
+
+Creating ANOVA Table
+anova_lm method from anova module of statsmodels library can be used for performing ANOVA.
+
+from statsmodels.stats import anova
+print(anova.anova_lm(model1))
+Output
+     df    sum_sq  mean_sq  F       P(>F)
+temp 1.0   0.075   0.075    42.279  0.000
+Resi 28.0  0.05    0.001    NaN     NaN
+The obtained F-statistic is 42.27 and has a very low probability.
+
+Hence, the null hypothesis can be rejected. i.e., B1 is not equal to zero.
+
+
+
+
+Building New Model
+Now let's create a new model with two independent variables and one response variable.
+
+With more that one independent variable, the null hypothesis is stated as Coefficients of all independent variables are zero. i.e B1 = 0, and B2 = 0.
+
+The alternative hypothesis will be that atleast one of the parameters Bj != 0 where j takes the values 1, 2, ...
+
+model2 = smf.ols('cons ~ income + temp', icecream_data).fit()
+
+
+
+
+
+Creating ANOVA Table
+ANOVA table for model2 can be created as shown below.
+print(anova.anova_lm(model2))
+Output
+        df   sum_sq  mean_sq F     PR(>F)
+income  1.0  0.000   0.000   0.208 0.651
+temp    1.0  0.087   0.087   63.41 0.000
+Resi    27.0 0.037   0.001   NaN   NaN
+The above table shows F-statistic corresponding to each independent variable.
+
+Calculation of F-statistic for the model is shown in next slide.
+
+
+
+Determining F-Value
+F-statistic is defined as Mean square of model/Mean square of residuals.
+
+Mean square of model is sum of squares values of all variables/degrees of freedom i.e (0.000288 + 0.087836)/2 = 0.044062.
+
+Hence, the F-statistic of model is (0.044062 / 0.001385) = 31.813.
+
+The probability of obtained F-statistic is 7.96*e-08 and is computed as shown below:
+
+print(stats.f.sf(31.81, 2, 27))
+Since the p-value is low, null hypothesis is rejected.
+
+
+
+Comparing Two Models
+ANOVA can also be used to compare two nested or related models.
+
+model1 regresses consumption with temperature and model2 with temperature and income.
+
+Below code verifies if the decrease in residuals sum of squares is significant or not.
+
+print(anova.anova_lm(model1, model2))
+Output
+   df_r  ssr   df_diff ss_diff  F Pr(>F)
+0  28.0  0.050 0.0  NaN    NaN    NaN
+1  27.0  0.037 1.0  0.012  9.104  0.005
+p-value i.e 0.005 from above table suggests the decrease in residual sum of squares in model2, compared to model1 is significant.
+
+
+

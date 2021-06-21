@@ -1,0 +1,161 @@
+Example Datasets
+statsmodels contain few popular example datasets, which can be used to explore various utilities of the package.
+
+The example data sets are available in datasets module.
+
+Each dataset is associated with special variables like SOURCE, DESCSHORT, DESCLONG, that provide more info about the dataset.
+
+A dataset can be loaded using load function, and its data can be accessed using data attribute in the form of Numpy's recarray.
+
+
+
+
+
+Loading Example Datasets
+The below example shows loading of popular breast cancer dataset and accessing its data as numpy array.
+Example
+import statsmodels.api as sm
+
+bc_cancer_set = sm.datasets.cancer
+
+bc_cancer = bc_cancer_set.load()
+
+bc_cancer_data = bc_cancer.data
+
+print(type(bc_cancer_data))
+The data can be accessed in from of pandas data frame, if it is loaded with function load_pandas.
+
+
+
+Loading R Datasets
+statsmodels package provides access to many example datasets of R, listed at R Datasets repository
+
+The below example loads Icecream dataset from Ecdat package.
+
+import statsmodels.api as sm
+
+icecream_data = sm.datasets.get_rdataset('Icecream', 'Ecdat')
+data = icecream_data.data
+
+print(icecream_data.data.shape)
+Output
+(30, 4)
+The data is accessible via data attribute, as a pandas data frame.
+
+
+
+Linear Regression Example
+Linear Regression Example
+Let's understand how to fit a linear regression model for Icecream dataset available from R Data Repository.
+Loading the Dataset
+import statsmodels.api as sm
+
+icecream = sm.datasets.get_rdataset("Icecream", "Ecdat")
+
+icecream_data = icecream.data
+
+print(icecream_data.columns)
+Output
+Index(['cons', 'income', 'price', 'temp'], dtype='object')
+The icecream_data dataset is a pandas data frame. It contains four variables: cons (consumption), income, price, and temp (temperature).
+
+
+
+
+
+Model Creation
+Choosing a Model
+Initially, let's model consumption with price and temperature, as a linear model.
+
+The patsy formula for assumed model is: cons ~ price + temp
+
+Creating a Model
+import statsmodels.formula.api as smf
+
+linear_model1 = smf.ols('cons ~ price + temp', icecream_data)
+Fitting the Model
+linear_result1 = linear_model1.fit()
+
+
+
+
+
+Viewing Model Summary
+Viewing Model Summary
+Model summary can be viewed using the command,
+
+print(linear_result1.summary())
+
+
+
+
+
+
+Analyzing the Model
+The R-squared value of 0.633 suggests that model is not a proper fit.
+
+The probability value of coefficient price is high, i.e., 0.141. This accepts the null-hypothesis: the value of price coefficient is equal to zero.
+
+Hence, the variable price does not affect cons variable.
+
+
+Model Recreation
+Now let's create a new model by considered income and temp dependent variables.
+linear_model2 = smf.ols('cons ~ income + temp', icecream_data)
+
+linear_result2 = linear_model2.fit()
+
+print(linear_result2.summary())
+
+
+
+
+Viewing Recreated Model Summary
+Viewing Recreated Model Summary
+Model summary is viewed using command linear_result2.summary().
+
+
+
+
+
+
+Analyzing Model
+R-squared value improved to 0.702, suggesting this is a better model than previous one.
+
+Probability values of income and temp are low, indicating they are highly significant to cons.
+
+The probability value of Intercept is too high.
+
+
+
+
+
+Model Recreation
+Now let's create a new model without considering intercept term.
+linear_model3 = smf.ols('cons ~ -1 + income + temp', icecream_data)
+
+linear_result3 = linear_model3.fit()
+
+print(linear_result3.summary())
+R-squared value increased to 0.990, which suggests the model could best describe the relationship of cons with income and temp variables.
+
+
+
+
+Viewing Final Model Summary
+Viewing Final Model Summary
+Model summary is viewed using command linear_result3.summary().
+
+
+
+
+
+
+
+
+
+
+
+
+
+

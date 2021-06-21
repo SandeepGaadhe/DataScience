@@ -1,0 +1,197 @@
+Centrality Measures
+Centrality measures determine the center of a dataset.
+
+The three major centrality measures are: mean, median, and mode.
+
+Mean
+
+Mean is the sum of all values divided by a total number of values, of a data set.
+
+mean function of numpy is used to compute mean marks obtained by five students in a subject s1.
+
+Example
+import numpy as np
+
+s1 = np.array([86, 47, 45, 47, 40])
+
+print(np.mean(s1))
+Output
+53.0
+
+Median
+Median
+
+Median is the value that separates the given data set into two halves.
+
+median function of numpy library can be used to compute median of a data set, as shown here,
+
+Example
+import numpy as np
+
+s1 = np.array([86, 47, 45, 47, 40])
+
+print(np.median(s1))
+Output
+4
+
+Mode
+Mode
+
+The value that appears most often in a dataset is called the mode value.
+
+mode function of scipy.stats module can be used for computing mode of a given data set.
+
+Example
+from scipy import stats
+import numpy as np
+
+s1 = np.array([86, 47, 45, 47, 40])
+
+print(stats.mode(s1))
+Output
+ModeResult(mode=array([47]), count=array([2]))
+If there are more than a single value, then only the first one is returned by mode function.
+
+
+Measures of Dispersion
+Measures of Dispersion provide insights on the spread of given dataset.
+
+Major measures of dispersion are: range, percentile, inter-quartile range, standard deviation, variance, skewness, and kurtosis.
+
+Range
+
+Range is the difference between maximum and minimum values of the dataset.
+Example
+import numpy as np
+
+s1 = np.array([86, 47, 45, 47, 40])
+
+print(np.ptp(s1))
+Output
+46
+
+
+Percentile
+Percentile
+
+Percentile refers to a value, below which lies given the percentage of data points.
+
+E.g., 45th percentile refers to a value below which 45% of data points are found.
+
+percentile function of numpy can be used to compute a single or multiple percentiles.
+
+Example
+import numpy as np
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+print(np.percentile(s2, 45, interpolation='lower'))
+Output
+65
+
+
+
+Quartiles
+Quartiles
+Three Quartiles namely, Q1 Q2 and Q3, split the entire dataset into four equal parts.
+
+Each part contains 25% of data.
+
+Example
+import numpy as np
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+print(np.percentile(s2, [25, 50, 75], interpolation='lower'))
+Output
+[47 65 83]
+
+
+Inter Quartile Range (IQR)
+Inter Quartile Range (IQR)
+Inter quartile range refers to difference between third quartile (Q3) and first quartile (Q1).
+
+iqr method from scipy.stats can be used for calculating it.
+
+Example
+import numpy as np
+from scipy import stats
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+print(stats.iqr(s2, rng=(25, 75), interpolation='lower'))
+Output
+36
+
+Variance and Standard Deviation
+Variance
+
+Variance is defined as the average of squared differences, of each data point from dataset's mean.
+Standard Deviation
+
+Standard Deviation is square root of variance.
+
+var and std functions of numpy can be used for computing variance and standard deviation respectively.
+
+By default, the functions assume that the dataset represents entire population.
+
+To represent a sample, derived from a population, ddof parameter is set to 1.
+
+
+Variance and Standard Deviation
+Example
+import numpy as np
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+
+print(np.var(s2))
+print(np.std(s2))
+
+# s2 representing a population's sample
+print(np.var(s2, ddof=1))
+print(np.std(s2, ddof=1))
+Output
+454.21
+21.31
+504.68
+22.47
+
+
+Skewness
+Skewness
+
+skewness determines whether the majority of data points are present on one side of the distribution.
+
+A positive value represents right skewed distribution; a negative value represents left skewed one, zero represent unskewed distribution.
+
+Example
+import numpy as np
+from scipy import stats
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+print(stats.skew(s2))
+Output
+0.043
+
+
+
+Kurtosis
+Kurtosis
+
+Kurtosis indicates how much of data is concentrated around mean or shape of the probability distribution.
+
+It can be estimated using kurtosis function of scipy.stats module.
+
+By default, it uses Fisher’s definition. This can be changed to Pearson by setting fisher parameter to False.
+
+import numpy as np
+from scipy import stats
+
+s2 = np.array([86, 47, 45, 47, 40, 97, 98, 75, 65, 83])
+
+print(stats.kurtosis(s2))
+Output
+-1.56
+

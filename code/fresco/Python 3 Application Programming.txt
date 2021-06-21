@@ -1,0 +1,1213 @@
+Working with Files
+How to handle data in a file?
+
+Data from an opened file can be read using any of the methods: read, readline and readlines.
+
+Data can be written to a file using either write or writelines method.
+
+A file must be opened, before it is used for reading or writing.
+
+Example: Reading a file
+
+fp = open('temp.txt', 'r')   # opening
+content = fp.read()          # reading
+fp.close()                   # closing
+
+
+
+
+
+
+
+Regular expressions are patterns that help in filtering the text possessing them, and also in extracting portions of data that match the patterns, for further use.
+
+The patterns are built using special characters.
+
+Python uses re package to deal with regular expressions.
+
+Example
+
+import re
+pattern='for'
+text='information'
+if re.search(pattern, text):
+    print('Yes')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+Python Database API
+How to connect to Python database?
+
+Python Database API (DB-API) is a standard interface to interact with various databases.
+
+DB-API supports connecting to different database servers such as Microsoft SQL Server 2000, PostgreSQL, Oracle.
+
+Different DB API’s are used for accessing different databases. Hence a programmer has to install DB API corresponding to the database one is working with.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Working with a Database
+Working with a database includes the following steps:
+
+Importing the corresponding DB-API module.
+
+Acquiring a connection with the database.
+
+Executing SQL statements and stored procedures.
+
+Closing the connection
+
+
+
+
+
+
+Creating Tables
+You have connected to the database. Now, how do you create your tables in the database?
+
+In this topic, you will learn using sqlite3, DB API for SQLite database.
+
+sqlite3 is available by default in Python standard library and hence there is no need of installing it separately.
+
+SQLite is a very lightweight database. You can connect to it directly, with minimal settings.
+
+
+Creating a Sample Table
+Example 1
+
+import sqlite3
+# establishing  a database connection
+con = sqlite3.connect('D:\\TEST.db')
+# preparing a cursor object
+cursor = con.cursor()
+# preparing sql statements
+sql1 = 'DROP TABLE IF EXISTS EMPLOYEE'
+
+
+Creating a Sample Table...
+Example 1...
+
+sql2 = '''
+
+       CREATE TABLE EMPLOYEE (
+       EMPID INT(6) NOT NULL,
+       NAME CHAR(20) NOT NULL,
+       AGE INT,
+       SEX CHAR(1),
+       INCOME FLOAT
+       )
+      '''
+
+# executing sql statements
+cursor.execute(sql1)
+cursor.execute(sql2)
+
+# closing the connection
+con.close()
+
+
+
+
+
+
+
+nserting Data
+Have you created your table? Now, let us learn how to insert data into the table.
+
+Data stored in Python variables can be inserted into database tables.
+
+Data is passed to SQL statements through parameter substitution.
+
+Single rows are inserted using execute and multiple rows using executeMany method of created cursor object.
+
+
+
+
+
+
+
+
+
+
+
+
+nserting a Sample Data
+Example 1
+
+import sqlite3
+# establishing the connection
+con = sqlite3.connect('D:\\TEST.db')
+# preparing a cursor object
+cursor = con.cursor()
+# preparing sql statement
+rec = (456789, 'Frodo', 45, 'M', 100000.00)
+sql = '''
+      INSERT INTO EMPLOYEE VALUES ( ?, ?, ?, ?, ?)
+      '''
+      
+      
+      
+      
+      
+      
+Inserting a Sample Data...
+Example 1...
+
+
+# executing sql statement using try ... except blocks
+
+try:
+
+    cursor.execute(sql, rec)
+
+    con.commit()
+
+except Exception as e:
+
+    print("Error Message :", str(e))
+
+    con.rollback()
+
+
+
+# closing the database connection
+
+con.close()
+
+A single record is inserted into table EMPLOYEE.
+
+
+
+
+
+
+
+
+
+Inserting a Sample Data...
+Example 2
+
+
+import sqlite3
+
+
+
+con = sqlite3.connect('D:\\TEST.db')
+
+
+
+cursor = con.cursor()
+
+
+
+# preparing sql statement
+
+records = [
+
+    (123456, 'John', 25, 'M', 50000.00),
+
+    (234651, 'Juli', 35, 'F', 75000.00),
+
+    (345121, 'Fred', 48, 'M', 125000.00),
+
+    (562412, 'Rosy', 28, 'F', 52000.00)
+
+    ]
+
+sql = '''
+
+       INSERT INTO EMPLOYEE VALUES ( ?, ?, ?, ?, ?)
+
+      '''
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+Inserting a Sample Data...
+Example 2...
+
+
+# executing sql statement using try ... except blocks
+
+try:
+
+    cursor.executemany(sql, records)
+
+    con.commit()
+
+except Exception as e:
+
+    print("Error Message :", str(e))
+
+    con.rollback()
+
+
+
+# closing the database connection
+
+con.close()
+
+Four more records are inserted into table EMPLOYEE.
+
+
+
+
+
+
+
+
+
+
+
+
+Fetching Data
+After executing the SQL statement for reading records from a table, either of the following methods can be used to retrieve them in python.
+
+fetchone: It retrieves one record at a time in the form of a tuple.
+
+fetchall: It retrieves all fetched records at a point in the form of tuple of tuples.
+
+
+
+
+
+
+
+
+
+
+Fetching Sample Data
+Example 1
+
+import sqlite3
+# establishing the connection
+con = sqlite3.connect('D:\\TEST.db')
+# preparing a cursor object
+cursor = con.cursor()
+# preparing sql statement
+sql = '''
+       SELECT * FROM EMPLOYEE
+      '''
+# executing the sql statement using `try ... except`
+try:
+    cursor.execute(sql)
+except:
+    print('Unable to fetch data.')
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    Fetching Sample Data...
+Example 1...
+
+
+# fetching the records
+
+records = cursor.fetchall()
+
+
+
+# Displaying the records
+
+for record in records:
+
+    print(record)
+
+
+
+# closing the connection
+
+con.close()
+
+The above example fetches and displays all five records inserted into EMPLOYEE.
+
+Similarly, you can perform updating or delete records by preparing required SQL statements.
+
+
+Object Relational Mappers
+An object-relational mapper (ORM) is a library that automates the transfer of data stored in relational database tables into objects that are adopted in application code.
+
+ORMs offer a high-level abstraction upon a relational database, which permits a developer to write Python code rather than SQL to create, read, update and delete data and schemas in their database.
+
+
+
+
+
+Sample ORM Query
+Consider the sample SQL statement used to retrieve employees whose income is 10,000.00.
+
+SELECT * FROM EMPLOYEE WHERE INCOME=10000.00
+
+The equivalent Django ORM query is
+
+emps = Employee.objects.filter(income=10000.00)
+
+The above code is written in Python and easy to read.
+
+Such an ability to write Python code instead of SQL speeds up web application development
+
+
+
+
+
+
+
+
+
+
+
+Higher Order Functions
+Higher Order Functions
+Hope you have understood from the previous course Functions and OOPs, what is a function? Now, let us understand what is a higher order function.
+
+A Higher Order function is a function, which is capable of doing any one of the following things:
+
+It can be functioned as a data and be assigned to a variable.
+
+It can accept any other function as an argument.
+
+It can return a function as its result.
+
+The ability to build Higher order functions, allows a programmer to create Closures, which in turn are used to create Decorators.
+
+
+
+
+
+
+Function as a Data
+Example
+def greet():
+    return 'Hello Everyone!'
+print(greet())
+wish = greet        # 'greet' function assigned to variable 'wish'
+print(type(wish))   
+print(wish())      
+Output
+Hello Everyone!
+<type 'function'>
+Hello Everyone!
+
+
+
+
+
+
+
+Function as an Argument
+Example
+def add(x, y):
+    return x + y
+def sub(x, y):
+   return x - y
+def prod(x, y):
+    return x * y
+def do(func, x, y):
+   return func(x, y)
+print(do(add, 12, 4))  # 'add' as arg
+print(do(sub, 12, 4))  # 'sub' as arg
+print(do(prod, 12, 4))  # 'prod' as arg
+output
+16
+8
+48
+
+
+Returning a Function
+Example
+
+def outer():
+
+    def inner():
+
+        s = 'Hello world!'
+
+        return s            
+
+        
+
+    return inner()    
+
+
+
+print(outer())
+
+output
+
+Hello world!
+
+You can observe from the output that the return value of 'outer' function is the return value of 'inner' function i.e 'Hello world!'.
+
+
+
+
+
+
+
+
+
+
+Returning a Function
+Example
+
+def outer():
+
+    def inner():
+
+        s = 'Hello world!'
+
+        return s            
+
+        
+
+    return inner   # Removed '()' to return 'inner' function itself
+
+    
+
+print(outer()) #returns 'inner' function
+
+func = outer() 
+
+print(type(func))
+
+print(func()) # calling 'inner' function
+
+output
+
+<function inner at 0xxxxxx>
+
+<type 'function'>
+
+Hello world!
+
+Parenthesis after the inner function are removed so that the outer function returns inner function.
+
+
+
+
+
+
+
+
+
+
+Closures
+In simplest terms, a Closure is a function returned by a higher order function, whose return value depends on the data associated with the higher order function.
+
+Example
+def multiple_of(x):
+    def multiple(y):
+        return x*y
+    return multiple
+c1 = multiple_of(5)  # 'c1' is a closure
+c2 = multiple_of(6)  # 'c2' is a closure
+print(c1(4))
+print(c2(4))
+
+
+
+
+
+
+
+
+
+
+Closures...
+Example
+
+You can observe from the example that the closure functions c1 and c2 hold the data passed to enclosing function, multiple_of, during their creation.
+
+The first closure function, c1 binds the value 5 to argument x and when called with an argument 4, it executes the body of multiple function and returns the product of 5 and 4.
+
+Similarly c2 binds the value 6 to argument x and when called with argument 4 returns 24.
+
+output
+
+20
+
+24
+
+
+
+
+
+
+
+
+
+
+
+
+
+Decorators
+Decorators
+Decorators are evolved from the concept of closures.
+
+A decorator function is a higher order function that takes a function as an argument and returns the inner function.
+
+A decorator is capable of adding extra functionality to an existing function, without altering it.
+
+The decorator function is prefixed with @ symbol and written above the function definition.
+
+
+
+Decorators...
+Consider the following three examples:
+
+First one shows the creation of closure function wish using the higher order function outer.
+
+The second one shows the creation of decorator function outer, which is used to decorate function greet. This is achieved with a small change to Example1.
+
+Third one displays decorating the greet function with decorator function, outer, using @ symbol.
+
+
+
+
+Decorator Examples
+Example 1
+
+def outer(func):
+    def inner():
+        print("Accessing :", 
+                  func.__name__)
+        return func()
+    return inner
+def greet():
+   print('Hello!')
+wish = outer(greet)
+wish()
+wish is the closure function obtained by calling an outer function with the argument greet.
+
+When wish function is called, inner function gets executed.
+
+Output
+Accessing : greet
+Hello!
+
+
+
+
+Decorator Examples...
+Example 2
+
+def outer(func):
+   def inner():
+        print("Accessing :", 
+                  func.__name__)
+        return func()
+    return inner
+def greet():
+   return 'Hello!'
+greet = outer(greet) # decorating 'greet'
+greet()  # calling new 'greet'
+Output
+Accessing : greet
+The function returned by outer is assigned to greet i.e the function name passed as argument to outer.
+
+This makes outer a decorator to greet.
+
+
+
+
+
+
+
+
+
+
+
+Decorator Examples...
+In Python, decorating a function can also be achieved by writing decorator function name, prefixed with @ symbol, just above the function to be decorated.
+
+Hence, greet = outer(greet) expression is same as @outer.
+
+Example 3
+
+def outer(func):
+    def inner():
+        print("Accessing :", 
+                func.__name__)
+        return func()
+    return inner
+@outer
+def greet():
+    return 'Hello!'
+greet()
+Output
+
+Accessing : greet
+
+
+
+
+
+
+
+
+
+
+
+
+
+Descriptors
+Python descriptors allow a programmer to create managed attributes.
+
+In other object-oriented languages, you will find getter and setter methods to manage attributes.
+
+However, Python allows a programmer to manage the attributes simply with the attribute name, without losing their protection.
+
+This is achieved by defining a descriptor class, that implements any of __get__, __set__, __delete__ methods.
+
+
+
+
+
+
+
+
+Descriptors - Example
+Example 1
+
+class EmpNameDescriptor:
+    def __get__(self, obj, owner):
+        return self.__empname
+    def __set__(self, obj, value):
+        if not isinstance(value, str):
+            raise TypeError("'empname' must be a string.")
+        self.__empname = value
+The descriptor, EmpNameDescriptor is defined to manage empname attribute.
+
+It checks if the value of empname attribute is a string or not.
+
+
+
+
+
+Descriptors - Example...
+Example 1...
+
+class EmpIdDescriptor:
+    def __get__(self, obj, owner):
+        return self.__empid
+    def __set__(self, obj, value):
+        if hasattr(obj, 'empid'):
+            raise ValueError("'empid' is read only attribute")
+        if not isinstance(value, int):
+            raise TypeError("'empid' must be an integer.")
+        self.__empid = value
+The descriptor, EmpIdDescriptor is defined to manage empid attribute.
+
+
+
+
+Descriptors - Example...
+Example 1...
+
+class Employee:
+    empid = EmpIdDescriptor()           
+    empname = EmpNameDescriptor()       
+    def __init__(self, emp_id, emp_name):
+        self.empid = emp_id
+        self.empname = emp_name
+Employee class is defined such that, it creates empid and empname attributes from descriptors EmpIdDescriptor and EmpNameDescriptor.
+
+
+
+Descriptors - Example...
+Example 1...
+
+e1 = Employee(123456, 'John')
+print(e1.empid, '-', e1.empname)  
+e1.empname = 'Williams'
+print(e1.empid, '-', e1.empname)
+e1.empid = 76347322  
+You can observe that accessing attributes empid and empname appear as if you are accessing them directly.
+
+However when executing the expression e1.empid = 76347322, the __set__ method defined in EmpIdDescriptor is executed and raises "ValueError: 'empid' is read only attribute".
+
+
+
+Properties
+Descriptors can also be created using property() type.
+
+It is easy to create a descriptor for any attribute using property().
+
+Syntax of defining a Property
+
+property(fget=None, fset=None, fdel=None, doc=None)
+
+where,
+
+fget : attribute get method
+
+fset : attribute set method
+
+fdel – attribute delete method
+
+doc – docstring
+
+
+
+
+
+Properties - Example
+Example 1
+
+class Employee:
+    def __init__(self, emp_id, emp_name):
+        self.empid = emp_id
+        self.empname = emp_name
+    def getEmpID(self):
+        return self.__empid
+    def setEmpID(self, value):
+       if not isinstance(value, int):
+            raise TypeError("'empid' must be an integer.")
+        self.__empid = value
+   empid = property(getEmpID, setEmpID)
+empid attribute created using property.
+
+
+
+
+
+Properties - Example...
+Example 1...
+
+
+    def getEmpName(self):
+
+        return self.__empname
+
+
+
+    def setEmpName(self, value):
+
+        if not isinstance(value, str):
+
+            raise TypeError("empname' must be a string.")
+
+        self.__empname = value
+
+
+
+    def delEmpName(self):
+
+        del self.__empname
+
+
+
+    empname = property(getEmpName, setEmpName, delEmpName)
+
+empname attribute created using property. It is deleted when delEmpName method is called.
+
+
+
+
+
+Properties - Example...
+Example 1...
+
+
+e1 = Employee(123456, 'John')
+
+print(e1.empid, '-', e1.empname)    # -> '123456 - John'
+
+del e1.empname    # Deletes 'empname'
+
+print(e1.empname) #Raises 'AttributeError'
+
+Output
+
+123456 - John
+
+AttributeError: ...
+
+When del e1.empname is executed, it in turn calls delEmpName method.
+
+Hence accessing empname attribute after the del expression results in AttributeError.
+
+
+
+
+
+Property Decorators
+Descriptors can also be created with property decorators.
+
+While using property decorators, an attribute's get method will be same as its name and will be decorated with property.
+
+In a case of defining any set or delete methods, they will be decorated with respective setter and deleter methods.
+
+
+Property - Decorator...
+Example 1
+
+class Employee:
+    def __init__(self, emp_id, emp_name):
+        self.empid = emp_id
+        self.empname = emp_name
+    @property
+    def empid(self):
+        return self.__empid
+    @empid.setter
+    def empid(self, value):
+        if not isinstance(value, int):
+            raise TypeError("'empid' must be an integer.")
+        self.__empid = value
+get and set methods of empid attribute are decorated with property.
+
+
+
+Property - Decorator...
+Example 1...
+
+    @property
+    def empname(self):
+        return self.__empname
+    @empname.setter
+    def empname(self, value):
+        if not isinstance(value, str):
+            raise TypeError("'empname' must be a string.")
+        self.__empname = value
+    @empname.deleter
+    def empname(self):
+        del self.__empname
+get, set, and del methods of empname are decorated with property.
+
+
+
+Property - Decorator...
+Example 1...
+
+e1 = Employee(123456, 'John')
+print(e1.empid, '-', e1.empname)    # -> '123456 - John'
+del e1.empname    # Deletes 'empname'
+print(e1.empname) #Raises 'AttributeError'
+Output
+123456 - John
+AttributeError : ...
+deleter method corresponding to empname attribute is called when the expression, del e1.empname is executed.
+
+
+
+
+
+
+
+
+
+Introduction to Class and Static Methods
+Introduction to Class and Static Methods
+You have read about function, higher order function, closures etc. Now, it is time to learn about their scope. Based on the scope, functions/methods are of two types. They are:
+
+Class methods
+
+Static methods
+
+
+
+Class Methods
+A method defined inside a class is bound to its object, by default.
+
+However, if the method is bound to a Class, then it is known as classmethod.
+
+Consider the following two examples:
+
+Example 1 defines the method getCirclesCount, bound to an object of Circle class.
+
+Example 2 defines the classmethod getCirclesCount, bound to class Circle.
+
+
+
+
+class Circle(object):
+    no_of_circles = 0
+    def __init__(self, radius):
+        self.__radius = radius
+        Circle.no_of_circles += 1
+    def getCirclesCount(self):
+        return Circle.no_of_circles
+c1 = Circle(3.5)
+c2 = Circle(5.2)
+c3 = Circle(4.8)
+print(c1.getCirclesCount())     # -> 3
+print(c2.getCirclesCount())     # -> 3
+print(Circle.getCirclesCount(c3)) # -> 3
+print(Circle.getCirclesCount()) # -> TypeError
+
+
+class Circle(object):
+    no_of_circles = 0
+    def __init__(self, radius):
+        self.__radius = radius
+        Circle.no_of_circles += 1
+    @classmethod
+    def getCirclesCount(self):
+        return Circle.no_of_circles
+c1 = Circle(3.5)
+c2 = Circle(5.2)
+c3 = Circle(4.8)
+print(c1.getCirclesCount())     # -> 3
+print(c2.getCirclesCount())     # -> 3
+print(Circle.getCirclesCount()) # -> 3
+
+
+
+
+Static Method
+A method defined inside a class and not bound to either a class or an object is known as Static Method.
+
+Decorating a method using @staticmethod decorator makes it a static method.
+
+Consider the following two examples:
+
+Example1 defines the method square, outside the class definition of Circle, and uses it inside the class Circle.
+
+Example2 defines the static method square, inside the class Circle, and uses it.
+
+
+
+def square(x):
+        return x**2
+class Circle(object):
+    def __init__(self, radius):
+        self.__radius = radius
+    def area(self):
+        return 3.14*square(self.__radius)
+c1 = Circle(3.9)
+print(c1.area()) -> 47.7594
+print(square(10)) -> 100
+
+class Circle(object):
+    def __init__(self, radius):
+        self.__radius = radius
+    @staticmethod
+    def square(x):
+        return x**2
+    def area(self):
+        return 3.14*self.square(self.__radius)
+c1 = Circle(3.9)
+print(c1.area())  
+print(square(10)) # -> NameError
+
+
+print(Circle.square(10)) # -> 100
+
+print(c1.square(10))     # -> 100
+
+
+
+Abstract Base Classes
+Abstract Base Classes
+An Abstract Base Class or ABC mandates the derived classes to implement specific methods from the base class.
+
+It is not possible to create an object from a defined ABC class.
+
+Creating objects of derived classes is possible only when derived classes override existing functionality of all abstract methods defined in an ABC class.
+
+
+
+ABC - Example
+In Python, an Abstract Base Class can be created using module abc.
+Example 1
+
+from abc import ABC, abstractmethod
+class Shape(ABC):
+    @abstractmethod
+    def area(self):
+        pass
+    @abstractmethod
+    def perimeter(self):
+        pass
+In Example 1, Abstract base class Shape is defined with two abstract methods area and perimeter.
+
+
+
+
+ABC - Example...
+Example 1...
+
+With existing abstract class definition of Shape, if you try creating a Shape object it results in TypeError.
+
+s1 = Shape()
+
+Output
+
+
+TypeError: Can't instantiate abstract class Shape with abstract methods area, perimeter
+
+
+
+ABC - Example...
+Example 1...
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.__radius = radius
+    @staticmethod
+    def square(x):
+        return x**2
+    def area(self):
+        return 3.14*self.square(self.__radius)
+c1 = Circle(3.9)
+Creating object c1, with out definingperimeter inside derived class, Circle, resulted in TypeError.
+Output
+
+TypeError: Can't instantiate abstract class Circle with abstract methods perimeter
+
+
+ABC - Example...
+Example 1...
+
+Corrected class definition of Circle, that contains perimeter definition too.
+class Circle(Shape):
+    def __init__(self, radius):
+        self.__radius = radius
+    @staticmethod
+    def square(x):
+        return x**2
+    def area(self):
+        return 3.14*self.square(self.__radius)
+    def perimeter(self):
+        return 2*3.14*self.__radius
+c1 = Circle(3.9)
+print(c1.area())
+Output
+
+47.7594
+
+
+
+Context Manager
+Context Manager
+A Context Manager allows a programmer to perform required activities, automatically, while entering or exiting a Context.
+
+For example, opening a file, doing few file operations, and closing the file is manged using Context Manager as shown below.
+
+
+with open('sample.txt', 'w') as fp:
+
+    content = fp.read()
+
+The keyword with is used in Python to enable a context manager. It automatically takes care of closing the file.
+
+
+
+
+
+Context Manager...
+Consider the following example, which tries to establish a connection to a database, perform few db operations and finally close the connection.
+Example 1
+
+import sqlite3
+try:
+    dbConnection = sqlite3.connect('TEST.db')
+    cursor = dbConnection.cursor()
+    '''
+    Few db operations
+    ...
+    '''
+except Exception:
+    print('No Connection.')
+finally:
+    dbConnection.close()
+
+    
+    
+    
+Context Manager...
+Example 2
+
+import sqlite3
+class DbConnect(object):
+    def __init__(self, dbname):
+        self.dbname = dbname
+    def __enter__(self):
+        self.dbConnection = sqlite3.connect(self.dbname)
+        return self.dbConnection
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        self.dbConnection.close()
+with DbConnect('TEST.db') as db:
+    cursor = db.cursor()
+    '''
+   Few db operations
+   ...
+    '''
+
+
+
+Coroutines
+Coroutines
+A Coroutine is generator which is capable of constantly receiving input data, process input data and may or may not return any output.
+
+Coroutines are majorly used to build better Data Processing Pipelines.
+
+Similar to a generator, execution of a coroutine stops when it reaches yield statement.
+
+A Coroutine uses send method to send any input value, which is captured by yield expression.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
