@@ -1,4 +1,4 @@
-
+data/
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting.zip
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/train.csv
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/awards.csv
@@ -11,3 +11,7 @@ data/kaggle/mlb/mlb-player-digital-engagement-forecasting/seasons.csv
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/teams.csv
 *.csv
 *.xlsx
+*Copy*.py
+*ipynb_checkpoints*
+*Untitled*.*py*
+*(*).*py*
