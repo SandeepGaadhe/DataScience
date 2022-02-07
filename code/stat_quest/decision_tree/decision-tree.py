@@ -130,16 +130,16 @@ df_gini = cal_gini(p_df = df, p_index = 'Index', p_label = 'Heart Disease', p_un
 
 # In[31]:
 
-the code is completed up to this point
-next to do:
-    - identify root node which is GBC in this case based on lowest gini
-    - iteratively define branch node until a leaf node is identified
-    - start video at time https://youtu.be/7VeUPuFGJHk?t=612
+#the code is completed up to this point
+#next to do:
+#    - identify root node which is GBC in this case based on lowest gini
+#    - iteratively define branch node until a leaf node is identified
+#    - start video at time https://youtu.be/7VeUPuFGJHk?t=612
 
 # In[33]:
 
 
-df_root = pd.DataFrame(df891)
+df_root = pd.DataFrame(df)
 
 df_root['branch1_SexEqMale'] = df_root["Sex"].apply(lambda x: 1 if x == 'male' else 0)
 df_root['branch2_SexNEqMale'] = df_root["Sex"].apply(lambda x: 1 if x == 'female' else 0)
