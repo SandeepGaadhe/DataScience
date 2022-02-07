@@ -1,5 +1,6 @@
 import inspect
 
+
 from abc import ABC, abstractmethod
 
 # Define the abstract class 'Animal' below

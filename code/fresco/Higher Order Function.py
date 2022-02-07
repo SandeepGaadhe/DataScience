@@ -3,8 +3,6 @@
 import sys
 import os
 
-
-
 #Write detecter implementation
 def detecter(element):
     #Write isIn implementation    

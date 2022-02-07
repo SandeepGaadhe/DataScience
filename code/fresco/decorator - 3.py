@@ -1,3 +1,4 @@
+
 def bold_tag(pFunc):
     def mClosure(*args, **kwargs):
 

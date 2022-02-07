@@ -1,3 +1,4 @@
+
 def linear_equation(a, b):
     while True:
         x = yield

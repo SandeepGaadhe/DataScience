@@ -1,4 +1,5 @@
 # Define the generator function factorial_gen, which is capable of yielding factorial values of natural numbers.
+
 def factorial_gen():
     a = 0
     while True:

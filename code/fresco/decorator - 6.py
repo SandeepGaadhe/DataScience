@@ -1,7 +1,6 @@
 import os
 import sys
 
-
 def bold_tag(func):
     
     def inner(*args, **kwdargs):

@@ -1,3 +1,4 @@
+
 def factory(n = 0):
 
     def current():

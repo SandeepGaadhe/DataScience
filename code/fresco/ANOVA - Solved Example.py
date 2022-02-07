@@ -2,6 +2,7 @@ import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from statsmodels.stats import anova
 
+
 # Loading the Dataset
 icecream = sm.datasets.get_rdataset("Icecream", "Ecdat")
 icecream_data = icecream.data

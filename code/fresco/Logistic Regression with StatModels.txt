@@ -1,3 +1,4 @@
+
 Discrete Regression models
 statsmodels provide the following classes to work with discrete regression problems.
 

@@ -1,4 +1,4 @@
- Constructing Design Matrices
+Constructing Design Matrices
 The below example shows calculation of design matrices, y, and X, for the considered linear model Y = B0 + B1*X1 + B2*X2 + B3*X1*X2.
 Example
 import numpy as np

@@ -1,3 +1,4 @@
+
 Poisson Model Example
 Poisson Model describes a process where dependent variable refers to success count of many attempts and each attempt has a very low probability of success.
 

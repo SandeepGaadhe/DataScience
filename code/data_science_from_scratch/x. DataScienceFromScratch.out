@@ -1,7 +1,6 @@
 
 ***** Script Execution Start *****
 
-
 Parent loop execution for dUser: {'id': 0, 'name': 'Person0', 'friends': ['Person1', 'Person2'], 'foaf': [], 'foafCount': {}}
 
 Child loop execution for sfriend : Person1

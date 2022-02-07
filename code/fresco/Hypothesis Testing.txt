@@ -1,3 +1,4 @@
+
 Hypothesis Testing
 Hypothesis Testing
 Hypothesis Testing is a methodology for evaluating if a claim is acceptable or not, based on data.

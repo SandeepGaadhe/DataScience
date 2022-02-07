@@ -1,5 +1,6 @@
 from zipfile import ZipFile 
 
+
 # Define 'writeTo' function below, such that 
 # it writes input_text string to filename.
 def writeTo(filename, input_text):

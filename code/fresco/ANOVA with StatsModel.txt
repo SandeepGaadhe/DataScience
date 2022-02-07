@@ -1,4 +1,5 @@
 ANOVA Example
+
 Let's now understand how to perform ANOVA of a fitted regression model.
 
 For this example, let's once again consider popular Icecream dataset, used in linear regression section.
