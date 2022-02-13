@@ -1,4 +1,6 @@
 data/
+*archives*
+*/*archive*/*
 code/direct_downloads/
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting.zip
 data/kaggle/mlb/mlb-player-digital-engagement-forecasting/train.csv
